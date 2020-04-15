@@ -1,0 +1,30 @@
+@import '~antd/dist/antd.css';
+
+html{
+  background-color: #37383C
+}
+
+.todo-card{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.header{
+  text-align: center;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  padding-top: 2%;
+  color: white;
+}
+
+.ant-card-body{
+  background-color: #343233;
+  border-radius: 10px;
+}
+
+.save-button{
+  margin-left: 20px;
+  height: 50%;
+}
+
+
