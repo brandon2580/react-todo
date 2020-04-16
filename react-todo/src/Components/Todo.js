@@ -4,8 +4,8 @@ import InputField from './InputField'
 
 const Todo = () => {
 
-    const receiveDataFromChild = (inputValue) => {
-        console.log('Input: ' + inputValue)
+    const receiveDataFromChild = (completedInput) => {
+        console.log('Input: ' + completedInput)
     }
 
     return (
@@ -13,12 +13,13 @@ const Todo = () => {
             <Card className='todo-card'>
                 <h1 className='header'>Todo List</h1>
                 <div className='row d-flex justify-content-center '>
-                    <InputField callbackHandle={receiveDataFromChild} />
+                    <InputField receiveDataFromChild={receiveDataFromChild} saveTodo={console.warn} />
                 </div>
-                {}
+                
             </Card>
         </div>
     )
 }
+
 
 export default Todo
