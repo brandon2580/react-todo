@@ -1,22 +1,16 @@
 import React from 'react'
-import { Card } from 'antd';
-import InputField from './InputField'
+import { Button } from 'react-bootstrap'
 
-const Todo = () => {
-
-    const receiveDataFromChild = (completedInput) => {
-        console.log('Input: ' + completedInput)
-    }
+const Todo = (props) => {
+    const { id, value, handleRemoveItem } = props;
 
     return (
         <div className='container-fluid'>
-            <Card className='todo-card'>
-                <h1 className='header'>Todo List</h1>
-                <div className='row d-flex justify-content-center '>
-                    <InputField receiveDataFromChild={receiveDataFromChild} saveTodo={console.warn} />
-                </div>
-                
-            </Card>
+            <div>
+                <h1 key={id} className="todo">
+                    {value} <Button className='removeButton' onClick={() => handleRemoveItem(id)}>Remove</Button>
+                </h1>
+            </div>
         </div>
     )
 }

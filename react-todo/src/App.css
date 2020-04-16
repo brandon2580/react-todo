@@ -31,3 +31,17 @@ html{
   color: white;
 }
 
+.center{
+  text-align: center;
+}
+
+.todo{
+  color: white;
+}
+
+.removeButton{
+  height: 25px;
+  font-size: small;
+  border-radius: 10px;
+  background-color: red;
+}
