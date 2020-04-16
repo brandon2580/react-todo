@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'antd';
 import InputField from './InputField'
 
-const Todo = (props) => {
+const Todo = () => {
 
     const receiveDataFromChild = (inputValue) => {
         console.log('Input: ' + inputValue)
@@ -15,6 +15,7 @@ const Todo = (props) => {
                 <div className='row d-flex justify-content-center '>
                     <InputField callbackHandle={receiveDataFromChild} />
                 </div>
+                {}
             </Card>
         </div>
     )
