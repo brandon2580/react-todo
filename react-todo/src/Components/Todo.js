@@ -15,7 +15,6 @@ const Todo = (props) => {
                 <div className='row d-flex justify-content-center '>
                     <InputField callbackHandle={receiveDataFromChild} />
                 </div>
-                <h1>Item: {localStorage.getItem('inputValue')}</h1>
             </Card>
         </div>
     )

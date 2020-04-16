@@ -7,18 +7,18 @@ const InputField = (props) => {
 
     props.callbackHandle(input)
 
-    React.useEffect(() => {
-        localStorage.setItem('inputValue', input);
-    }, [input]);
+    const handleChange = e => setInput(e.target.value);
 
-    const onChange = e => setInput(e.target.value);
+    const handleSubmit = e => {
+        e.preventDefault()
+    }
 
     return (
         <div>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <div className='row'>
                     <Form.Group controlId="inputForm">
-                        <Form.Control type="input" placeholder="Input Item" value={input} onChange={onChange} />
+                        <Form.Control type="input" placeholder="Input Item" value={input} onChange={handleChange} />
                     </Form.Group>
                 </div>
             </Form>
