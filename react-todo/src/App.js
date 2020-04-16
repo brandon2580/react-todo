@@ -1,12 +1,13 @@
-import React, { useReducer, useEffect, useState, createContext } from "react";
+import React from "react";
 import { Card } from 'antd'
 import InputField from "./Components/InputField";
 import Todos from "./Components/Todos";
 import './App.css'
 
-export const TodoAppContext = createContext("");
-function App() {
-  const [todos, dispatch] = useReducer((state, action) => {
+export const TodoAppContext = React.createContext("");
+
+const App = () => {
+  const [todos, dispatch] = React.useReducer((state, action) => {
     if (action.type === "add") {
       if (state) state = [...state, action.value];
       else state = [action.value];
@@ -20,7 +21,7 @@ function App() {
   }, JSON.parse(localStorage.getItem("todos")) || []);
 
 
-  useEffect(() => {
+  React.useEffect(() => {
     document.title = `${todos.length} Todos`;
     return () => {
       localStorage.removeItem("todos");
