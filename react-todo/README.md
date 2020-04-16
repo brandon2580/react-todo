@@ -9,5 +9,3 @@ In the src directory, first run :
 Once that is completed, run
 
 ### `npm start`
-
-![Image description](https://gyazo.com/fef8561a7de6206f226aa8c52e0f6a1f)
